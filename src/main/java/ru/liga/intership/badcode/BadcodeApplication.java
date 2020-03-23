@@ -20,7 +20,5 @@ public class BadcodeApplication {
 				PersonFromDataBase.retrievePersonFromResultSet(resultSet));
 		System.out.println("Average imt - " +
 				personService.getAdultMaleUsersAverageBMI());
-		System.out.println(personService.getCountOfPerson());
-		System.out.println(personService.getSumOfImtAllPersons());
 	}
 }
