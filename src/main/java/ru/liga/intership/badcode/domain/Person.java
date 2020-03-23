@@ -9,10 +9,31 @@ public class Person {
     private Long age;
     private Long weight;
     private Long height;
+    private double heightInMeters;
+    private double imt;
 
 
     public Person() {
     }
+
+    public Person(Long id, String sex, String name, Long age, Long weight, Long height) {
+        this.id = id;
+        this.sex = sex;
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        heightInMeters = height / 100d;
+        imt = weight / (Double) (heightInMeters * heightInMeters);
+    }
+
+    public double getImt() {
+        return imt;
+    }
+
+    public double getHeightInMeters() {
+    	return heightInMeters;
+	}
 
     public Long getId() {
         return id;
